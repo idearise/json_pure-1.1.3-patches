@@ -248,7 +248,7 @@ module JSON
               s << state.space_before if state
               s << ':'
               s << state.space if state
-              s << value.to_json(state, depth + 1)
+              s << (state ? value.to_json(state, depth + 1) : value.to_json)
             }.join(delim)
             result << state.object_nl if state
             result << json_shift(state, depth)
@@ -297,7 +297,7 @@ module JSON
             result = '['
             result << state.array_nl if state
             result << map { |value|
-              json_shift(state, depth + 1) << value.to_json(state, depth + 1)
+              json_shift(state, depth + 1) << (state ? value.to_json(state, depth + 1) : value.to_json)
             }.join(delim)
             result << state.array_nl if state
             result << json_shift(state, depth) 
