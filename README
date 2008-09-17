@@ -10,7 +10,9 @@ A typical error message is:
 lib/ruby/gems/1.8/gems/json_pure-1.1.3/lib/json/pure/generator.rb:251:in 
 `to_json': wrong # of arguments(2 for 0) (ArgumentError)
 
-See the commit history for the minor code changes.
+See the commit history for the minor code changes:
+
+http://github.com/idearise/json_pure-1.1.3-patches/commits/master
 
 More info at:
 
